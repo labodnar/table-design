@@ -48,6 +48,7 @@ function updateTable() {
   console.log(html)
   console.log(tp.baseArray)
   $("#table-1").html(html)
+  $("#feedback").html(""); // clear user del comments
 }
 
 
