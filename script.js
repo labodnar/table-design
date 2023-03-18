@@ -55,8 +55,6 @@ function updateTable() {
 
 
 
-
-
 // ON LOAD.......................................
 const tp = new table_processor; // this is active in all listeners
 console.clear();
