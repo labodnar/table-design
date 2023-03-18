@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link href="styles.css" rel="stylesheet">
+
+  <script type="module" defer src="script.js"></script>
+
+
+</head>
+
+
+<body>
+  <h1>Table Design</h1>
+  <br>
+  <!-- Main buttons -->
+
+  <div>
+    <button class="btn btn-outline-dark" onclick="clear_tbl_1()">Clear</button>
+    <button class="btn btn-outline-dark" id="tester">Update</button>
+  </div>
+
+  <!-- Feedback -->
+  <br>
+
+
+  <div class="row">
+    <div class="col-md-2">
+      <label for="count" class="form-label">Table row size</label>
+      <input type="text" class="form-control" id="rowCount" value="20">
+    </div>
+
+  </div>
+
+
+
+  <div>
+    <p id="feedback">
+      <!-- feedback goes here -->
+    </p>
+
+  </div>
+
+
+  <!-- Tables -->
+  <div row>
+    <div class="col-md-4">
+      <table id="table-1" class="table table-striped table-hover table-1">
+
+      </table>
+    </div>
+
+    <div class="col-md-4">
+      <table id="tbl-2" class="table table-striped table-hover table-1">
+
+
+
+      </table>
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
+
+
+
+<!-- Short Scripts -->
+
+<script>
+  function clear_tbl_1() {
+    $("#feedback").html("");
+    document.getElementById("table-1").innerHTML = "";
+    document.getElementById("rowCount").value = 20;
+  }
+
+
+  function removeTableRow(button) {
+    let i = button.parentElement.parentElement.rowIndex;
+    $("#feedback").html("User deleted num: " + button.value);
+    document.getElementById("table-1").deleteRow(i);
+  }
+
+
+
+</script>

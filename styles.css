@@ -1,0 +1,29 @@
+thead th {
+
+  position: sticky;
+  top: 0;
+  background-color: black !important;
+  color: white;
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+
+
+
+
+body {
+  margin-left: 40px;
+}
+
+.table-1 {
+  width: auto;
+  overflow: auto;
+  height: 500px;
+  display: block;
+
+
+}
+
+
